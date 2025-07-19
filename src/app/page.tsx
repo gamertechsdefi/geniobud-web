@@ -3,8 +3,6 @@
 import Header from "@/components/Header";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import Image from "next/image";
-import Link from "next/link";
-import { FaRobot, FaImage, FaFileAlt, FaGamepad, FaTrophy, FaUsers, FaMedal, FaPuzzlePiece, FaGem, FaUserGraduate, FaLightbulb, FaUsersCog, FaSmile } from 'react-icons/fa';
 import React from "react";
 import { RevealLinks } from "@/components/Footer";
 import FeatureCarousel from "@/components/FeatureCarousel";
@@ -26,7 +24,6 @@ export default function Home() {
             <a>
               <button className="font-bold text-xl cursor-pointer bg-gradient-to-r from-blue-600 to-blue-800 px-8 py-2 rounded-lg">START FREE</button>
             </a>
-            {/* <Link href="/more" className="font-bold border-2 border-blue-300 px-8 py-2 rounded-lg">Learn more</Link> */}
           </div>
         </section>
 
@@ -82,7 +79,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-white text-2xl font-bold mb-2">Image generation</h3>
-                <p className="text-gray-400 text-sm">Automatically generate your photos using GenioBud's Imagine feature</p>
+                <p className="text-gray-400 text-sm">Automatically generate your photos using GenioBud&apos;s Imagine feature</p>
                 <button className="text-xs font-bold tracking-wider text-white uppercase opacity-80 group-hover:opacity-100 transition">Coming soon</button>
               </div>
             </div>

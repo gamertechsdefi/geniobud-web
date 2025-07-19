@@ -76,7 +76,7 @@ export default function TestimonialCarousel() {
             const offset = i - current;
             let style = "";
             let z = 0;
-            let cardClass = "";
+            const cardClass = "";
             let textClass = "";
             let nameClass = "";
             if (i === current) {
@@ -104,7 +104,7 @@ export default function TestimonialCarousel() {
                 aria-hidden={i !== current}
               >
                 <div className="relative w-full flex flex-col items-center">
-                  <p className={textClass}>"{t.text}"</p>
+                  <p className={textClass}>{t.text}</p>
                   <span className={nameClass}>- {t.name}</span>
                 </div>
               </div>
