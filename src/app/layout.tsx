@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import { Space_Grotesk, Michroma } from "next/font/google";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-space-grotesk"
+
+});
+
+const michroma = Michroma ({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-michroma"
 
 });
 
@@ -22,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${spaceGrotesk.variable} antialiased`}
+        className={`${spaceGrotesk.variable} ${michroma.variable} antialiased`}
       >
         {children}
       </body>

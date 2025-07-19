@@ -1,9 +1,13 @@
 @import "tailwindcss";
 
 body {
-  background: #004BB5;
+  background: #012a63;
   color: white;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 400;
 
+}
+
+h1 {
+  font-family: var(--font-michroma);
 }

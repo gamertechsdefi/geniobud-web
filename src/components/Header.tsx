@@ -57,7 +57,7 @@ export default function Header() {
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
             whileHover={{ scale: 1.1 }}
           >
-           <Image src="/images/logo-txt.png" alt="logo" width={120} height={40} className="relative z-10 h-10 w-full" />
+           <Image src="/images/logo-txt.png" alt="logo" width={120} height={40} className="relative z-10 h-full w-full" />
           </motion.div>
 
           {/* Right Actions: hidden on mobile */}

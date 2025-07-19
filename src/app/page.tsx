@@ -1,204 +1,126 @@
 "use client";
 
 import Header from "@/components/Header";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
 import Image from "next/image";
 import Link from "next/link";
 import { FaRobot, FaImage, FaFileAlt, FaGamepad, FaTrophy, FaUsers, FaMedal, FaPuzzlePiece, FaGem, FaUserGraduate, FaLightbulb, FaUsersCog, FaSmile } from 'react-icons/fa';
-import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { RevealLinks } from "@/components/Footer";
+import FeatureCarousel from "@/components/FeatureCarousel";
 
 export default function Home() {
-  const [shimmerDone, setShimmerDone] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setShimmerDone(true), 3600);
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <div>
-      <main>
-        <Header />
+      <Header />
+      <main className="">
         {/* landing page section */}
-        <section className="min-h-screen p-8 text-center flex flex-col gap-2 items-center justify-center">
-          <motion.h1
-            initial={{ opacity: 0, scale: 0.92, y: 30 }}
-            animate={{
-              opacity: 1,
-              scale: [1, 1.025, 1],
-              y: 0,
-              textShadow: [
-                '0 0 32px #60a5fa, 0 0 64px #818cf8',
-                '0 0 48px #818cf8, 0 0 96px #a5b4fc',
-                '0 0 32px #60a5fa, 0 0 64px #818cf8'
-              ]
-            }}
-            transition={{
-              type: 'spring',
-              stiffness: 80,
-              damping: 12,
-              delay: 0.2,
-              scale: { duration: 2, repeat: Infinity, repeatType: 'loop', ease: 'easeInOut' },
-              textShadow: { duration: 2, repeat: Infinity, repeatType: 'loop', ease: 'easeInOut' }
-            }}
-            className="relative text-6xl md:text-8xl font-bold bg-gradient-to-b from-blue-200 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_0_16px_rgba(96,165,250,0.5)]"
-          >
-            <span className={shimmerDone ? undefined : "ai-shimmer"}>UNLEASH AI. EARN REWARDS. CONNECT FREELY</span>
-          </motion.h1>
-          <style>{`
-            .ai-shimmer {
-              position: relative;
-              display: inline-block;
-              overflow: hidden;
-            }
-            .ai-shimmer::after {
-              content: '';
-              position: absolute;
-              top: 0; left: -75%; width: 50%; height: 100%;
-              background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.5) 50%, transparent 100%);
-              animation: shimmer 3.5s 1;
-            }
-            @keyframes shimmer {
-              0% { left: -75%; }
-              100% { left: 125%; }
-            }
-          `}</style>
-          <p className="">GenioBud is your all-in-one intelligent platform
-            built for creators, learners, gamers, and builders. Whether you want to
-            chat with AI, generate images, upload PDFs, play and earn, or connect
-            with real people across locations — GenioBud gives you unlimited power.</p>
+        <section className="min-h-screen px-8 md:px-32 text-center flex flex-col gap-2 items-center justify-center">
+          <h1 className="relative text-3xl md:text-6xl pb-2 font-bold bg-gradient-to-b from-blue-200 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_0_16px_rgba(96,165,250,0.5)]">
+            Explore the Possibilities of Limitless AI through GenioBud
+          </h1>
+          <p className="md:px-16">Experience the power of AI across different domains with GenioBUd. Upgrade your creativity and productivity with the limitless AI Buddy</p>
+            
           <div className="flex flex-row gap-8">
             <a>
-              <button className="font-bold cursor-pointer bg-white text-black px-8 py-2 rounded-lg">Start free</button>
+              <button className="font-bold text-xl cursor-pointer bg-gradient-to-r from-blue-600 to-blue-800 px-8 py-2 rounded-lg">START FREE</button>
             </a>
-            <Link href="/more" className="font-bold border-2 border-blue-300 px-8 py-2 rounded-lg">Learn more</Link>
+            {/* <Link href="/more" className="font-bold border-2 border-blue-300 px-8 py-2 rounded-lg">Learn more</Link> */}
           </div>
         </section>
 
-        {/* why section */}
-        <section className="px-8">
-          <h1 className="text-4xl font-bold text-center mb-4">Why GenioBud?</h1>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {[
-              {
-                title: 'UNLIMITED AI, ANYTIME.',
-                desc: 'Get access to limitless AI conversations. Brainstorm ideas, get assignments done, learn new skills, generate contents, or chat for fun.'
-              },
-              {
-                title: 'CREATE WITHOUT LIMITS',
-                desc: 'From generating AI-powered images to uploading and analyzing PDFs, unleash your imagination.'
-              },
-              {
-                title: 'REAL PLAY TO EARN GAMES',
-                desc: 'Dive into a growing library of play-to-earn games, get rewarded for having fun'
-              },
-              {
-                title: 'COMPLETE TASKS, EARN MORE POINTS',
-                desc: 'Boost your productivity with a task system that rewards you. Every action you take brings you closer to amazing digital and physical rewards.'
-              },
-              {
-                title: 'REAL TIME NETWORKING',
-                desc: 'Connect with others within the GenioBud network in real-time. Find friends, collaborators, and like-minds — wherever they are.'
-              }
-            ].map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 40, scale: 0.97 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                whileHover={{ scale: 1.03, boxShadow: '0 0 32px #60a5fa55, 0 0 64px #818cf855' }}
-                transition={{ duration: 0.6, delay: i * 0.08, type: 'spring', stiffness: 80, damping: 14 }}
-                viewport={{ once: true }}
-                className="bg-black/25 rounded-xl border border-blue-400/20 flex flex-col items-start p-4 shadow-lg cursor-pointer transition-all"
-              >
-                <h2 className="text-2xl font-bold pb-2 bg-gradient-to-r from-blue-200 to-blue-400 bg-clip-text text-transparent drop-shadow">{item.title}</h2>
-                <p className="text-white/90">{item.desc}</p>
-              </motion.div>
-            ))}
+        {/* feature carousel section */}
+        <FeatureCarousel />
+
+                
+        <section className="px-4 sm:px-8 py-16">
+          <h1 className="text-4xl font-bold text-yellow-500 text-center mb-10">Chat Smarter, Not Harder with GenioBud</h1>
+          <div className="flex flex-col md:flex-row justify-center gap-8 max-w-6xl mx-auto">
+            {/* Feature Card 1 */}
+            <div className="flex-1 bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl border-2 border-blue-400/40 p-8 shadow-lg relative group hover:shadow-blue-400/30 transition-all overflow-hidden">
+              <h2 className="text-2xl font-bold mb-4 text-white">Ask anything</h2>
+              <p className="mb-8 text-gray-200">Lets users quickly find answers to their questions without having to search through multiple sources.</p>
+              <div className="flex items-center justify-between">
+                <button className="text-xs font-bold tracking-wider text-white uppercase opacity-80 group-hover:opacity-100 transition">Explore more →</button>
+              </div>
+            </div>
+            {/* Feature Card 2 */}
+            <div className="flex-1 bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl border-2 border-blue-400/40 p-8 shadow-lg relative group hover:shadow-blue-400/30 transition-all overflow-hidden">
+              <h2 className="text-2xl font-bold mb-4 text-white">Improve everyday</h2>
+              <p className="mb-8 text-gray-200">The app uses natural language processing to understand user queries and provide accurate and helpful responses.</p>
+              <div className="flex items-center justify-between">
+                <button className="text-xs font-bold tracking-wider text-white uppercase opacity-80 group-hover:opacity-100 transition">Explore more →</button>
+              </div>
+            </div>
+            {/* Feature Card 3 */}
+            <div className="flex-1 bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl border-2 border-blue-400/40 p-8 shadow-lg relative group hover:shadow-blue-400/30 transition-all overflow-hidden">
+              <h2 className="text-2xl font-bold mb-4 text-white">Connect everywhere</h2>
+              <p className="mb-8 text-gray-200">Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.</p>
+              <div className="flex items-center justify-between">
+                <button className="text-xs font-bold tracking-wider text-white uppercase opacity-80 group-hover:opacity-100 transition">Explore more →</button>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* features section */}
-        <section className="px-4 sm:px-8 py-12">
-          <h1 className="text-4xl font-bold text-center mb-8">GenioBud Features</h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }} className="bg-gradient-to-br from-blue-900/80 to-blue-700/60 rounded-xl border border-blue-400/30 flex flex-col items-start p-6 shadow-lg">
-              <FaRobot className="text-4xl text-blue-300 mb-3" />
-              <span className="font-bold text-lg mb-1">Unlimited AI chats & tools</span>
-              <span className="text-white/80">Chat, create, and explore with limitless AI power.</span>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} viewport={{ once: true }} className="bg-gradient-to-br from-purple-900/80 to-purple-700/60 rounded-xl border border-purple-400/30 flex flex-col items-start p-6 shadow-lg">
-              <FaImage className="text-4xl text-purple-300 mb-3" />
-              <span className="font-bold text-lg mb-1">Powerful image generation engine</span>
-              <span className="text-white/80">Create stunning visuals with advanced AI models.</span>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} viewport={{ once: true }} className="bg-gradient-to-br from-pink-900/80 to-pink-700/60 rounded-xl border border-pink-400/30 flex flex-col items-start p-6 shadow-lg">
-              <FaFileAlt className="text-4xl text-pink-300 mb-3" />
-              <span className="font-bold text-lg mb-1">Upload & analyze PDFs instantly</span>
-              <span className="text-white/80">Get insights and answers from your documents in seconds.</span>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} viewport={{ once: true }} className="bg-gradient-to-br from-green-900/80 to-green-700/60 rounded-xl border border-green-400/30 flex flex-col items-start p-6 shadow-lg">
-              <FaGamepad className="text-4xl text-green-300 mb-3" />
-              <span className="font-bold text-lg mb-1">Access to real Play-to-Earn games</span>
-              <span className="text-white/80">Play, compete, and earn rewards in fun games.</span>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} viewport={{ once: true }} className="bg-gradient-to-br from-yellow-900/80 to-yellow-700/60 rounded-xl border border-yellow-400/30 flex flex-col items-start p-6 shadow-lg">
-              <FaTrophy className="text-4xl text-yellow-300 mb-3" />
-              <span className="font-bold text-lg mb-1">Task & point-based reward system</span>
-              <span className="text-white/80">Complete tasks, earn points, and unlock exclusive rewards.</span>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }} viewport={{ once: true }} className="bg-gradient-to-br from-cyan-900/80 to-cyan-700/60 rounded-xl border border-cyan-400/30 flex flex-col items-start p-6 shadow-lg">
-              <FaUsers className="text-4xl text-cyan-300 mb-3" />
-              <span className="font-bold text-lg mb-1">Community-based networking and growth</span>
-              <span className="text-white/80 ">Connect, collaborate, and grow with a vibrant community.</span>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }} viewport={{ once: true }} className="bg-gradient-to-br from-indigo-900/80 to-indigo-700/60 rounded-xl border border-indigo-400/30 flex flex-col items-start p-6 shadow-lg">
-              <FaMedal className="text-4xl text-indigo-300 mb-3" />
-              <span className="font-bold text-lg mb-1">Weekly competitions & leaderboard bonuses</span>
-              <span className="text-white/80">Climb the leaderboard and win weekly prizes.</span>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.7 }} viewport={{ once: true }} className="bg-gradient-to-br from-fuchsia-900/80 to-fuchsia-700/60 rounded-xl border border-fuchsia-400/30 flex flex-col items-start p-6 shadow-lg">
-              <FaPuzzlePiece className="text-4xl text-fuchsia-300 mb-3" />
-              <span className="font-bold text-lg mb-1">Mini-apps and experiences inside one platform</span>
-              <span className="text-white/80">Discover and use a suite of powerful mini-apps.</span>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }} viewport={{ once: true }} className="bg-gradient-to-br from-slate-900/80 to-slate-700/60 rounded-xl border border-slate-400/30 flex flex-col items-start p-6 shadow-lg">
-              <FaGem className="text-4xl text-slate-300 mb-3" />
-              <span className="font-bold text-lg mb-1">No hidden fees, freemium accessible</span>
-              <span className="text-white/80 ">Enjoy premium features with transparent, fair access.</span>
-            </motion.div>
+        {/* features section - new modern UI */}
+
+        {/* AI Media Section (step 1 skeleton) */}
+        <section className="bg-blue-900  w-full max-w-7xl mx-auto px-4 py-16">
+          <h1 className="text-3xl md:text-5xl font-bold mb-8 text-yellow-500 text-center">Generate unlimited images </h1>
+          <div className="flex flex-col md:flex-row gap-10">
+            {/* Left: Photo Editing Card */}
+            <div className="flex-1 bg-[#181A20] rounded-3xl p-8 flex flex-col items-start shadow-xl relative min-h-[420px]">
+              {/* Chat bubble */}
+              <div className="absolute left-10 top-8 bg-black text-white px-6 py-4 rounded-xl text-sm font-mono shadow-lg z-10">
+                Hey GenioBud, generate me<br />a samurai
+              </div>
+              {/* Placeholder for image */}
+              <div className="w-full h-64 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center mt-16 mb-6 relative overflow-hidden">
+                <Image src="/images/samurai-gen.webp" alt="samurai" width={500} height={500} />
+              </div>
+              <div>
+                <h3 className="text-white text-2xl font-bold mb-2">Image generation</h3>
+                <p className="text-gray-400 text-sm">Automatically generate your photos using GenioBud's Imagine feature</p>
+                <button className="text-xs font-bold tracking-wider text-white uppercase opacity-80 group-hover:opacity-100 transition">Coming soon</button>
+              </div>
+            </div>
+            {/* Right: Video Generation Card */}
+            <div className="flex-1 bg-[#181A20] rounded-3xl p-8 shadow-xl flex flex-col min-h-[420px]">
+              <h3 className="text-white text-3xl font-bold mb-2">PDF & Document Scans</h3>
+              <p className="text-gray-400 mb-6 text-sm">Upload your PDFs and documents to GenioBud and get instant insights and analysis.</p>
+              <div className="relative bg-[#101014] rounded-2xl flex flex-col items-start mt-auto min-h-[180px] shadow-lg">
+                <Image src="/images/pdf-gen.webp" alt="pdf" width={500} height={500} className="relative z-10 h-full w-full" />
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Who's GenioBud For? section */}
-        <section className="px-4 sm:px-8 py-12">
-          <h1 className="text-4xl font-bold text-center mb-8">Who’s GenioBud For?</h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }} className="bg-gradient-to-br from-blue-800/80 to-blue-600/60 rounded-xl border border-blue-400/30 flex flex-col items-center p-6 shadow-lg">
-              <FaUserGraduate className="text-4xl text-blue-200 mb-3" />
-              <span className="font-bold text-lg mb-1">Students</span>
-              <span className="text-white/80 text-center">Who want a powerful study partner</span>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} viewport={{ once: true }} className="bg-gradient-to-br from-green-800/80 to-green-600/60 rounded-xl border border-green-400/30 flex flex-col items-center p-6 shadow-lg">
-              <FaGamepad className="text-4xl text-green-200 mb-3" />
-              <span className="font-bold text-lg mb-1">Gamers</span>
-              <span className="text-white/80 text-center">Ready to monetize their play</span>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} viewport={{ once: true }} className="bg-gradient-to-br from-pink-800/80 to-pink-600/60 rounded-xl border border-pink-400/30 flex flex-col items-center p-6 shadow-lg">
-              <FaLightbulb className="text-4xl text-pink-200 mb-3" />
-              <span className="font-bold text-lg mb-1">Content Creators</span>
-              <span className="text-white/80 text-center">Looking for ideas, assets, and inspiration</span>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} viewport={{ once: true }} className="bg-gradient-to-br from-yellow-800/80 to-yellow-600/60 rounded-xl border border-yellow-400/30 flex flex-col items-center p-6 shadow-lg">
-              <FaUsersCog className="text-4xl text-yellow-200 mb-3" />
-              <span className="font-bold text-lg mb-1">Entrepreneurs & Developers</span>
-              <span className="text-white/80 text-center">Who want real-time collaboration</span>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} viewport={{ once: true }} className="bg-gradient-to-br from-cyan-800/80 to-cyan-600/60 rounded-xl border border-cyan-400/30 flex flex-col items-center p-6 shadow-lg">
-              <FaSmile className="text-4xl text-cyan-200 mb-3" />
-              <span className="font-bold text-lg mb-1">Everyday Users</span>
-              <span className="text-white/80 text-center">Who love tech, community, and fun</span>
-            </motion.div>
+        <TestimonialCarousel />
+
+        {/* Final Hero/CTA Section */}
+        <section className="relative min-h-[480px] flex flex-col items-center justify-center text-center bg-[#0a1633] overflow-hidden">
+          {/* Glowing Radial Background */}
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="glow" cx="50%" cy="50%" r="70%">
+                <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.3" />
+                <stop offset="60%" stopColor="#0a1633" stopOpacity="0.8" />
+                <stop offset="100%" stopColor="#0a1633" stopOpacity="1" />
+              </radialGradient>
+            </defs>
+            <rect width="1200" height="600" fill="url(#glow)" />
+          </svg>
+          <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-2xl mx-auto px-4 py-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Be part of the future of <br />
+              <span className="relative inline-block">
+                <span className="px-2 py-1 ] rounded-md">GenioBud</span>
+              </span>
+            </h1>
+            <p className="text-lg md:text-xl text-blue-100 mb-8">Unleash the power of AI within GenioBud. Upgrade your productivity with GenioBud, the open AI chat app.</p>
+            <button className="bg-white text-[#012a63] font-bold px-8 py-3 rounded-xl shadow-lg hover:bg-[#FFD600] hover:text-[#012a63] transition-all text-lg">GET STARTED</button>
           </div>
         </section>
       </main>
