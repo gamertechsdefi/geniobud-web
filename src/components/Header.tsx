@@ -43,7 +43,7 @@ export default function Header() {
                 History
               </motion.a>
               <motion.a 
-                href="#" 
+                href="https://t.me/geniobud" 
                 className="text-white/90 hover:text-white transition-colors duration-200"
                 whileHover={{ scale: 1.05 }}
               >

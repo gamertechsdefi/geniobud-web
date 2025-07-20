@@ -21,8 +21,8 @@ export default function Home() {
           <p className="md:px-16">Experience the power of AI across different domains with GenioBUd. Upgrade your creativity and productivity with the limitless AI Buddy</p>
             
           <div className="flex flex-row gap-8">
-            <a>
-              <button className="font-bold text-xl cursor-pointer bg-gradient-to-r from-blue-600 to-blue-800 px-8 py-2 rounded-lg">START FREE</button>
+            <a href="https://t.me/GenioBud_bot">
+              <button className="font-bold text-xl cursor-pointer bg-blue-500 px-8 py-2 rounded-lg">START FREE</button>
             </a>
           </div>
         </section>
@@ -65,7 +65,7 @@ export default function Home() {
 
         {/* AI Media Section (step 1 skeleton) */}
         <section className="bg-blue-900  w-full max-w-7xl mx-auto px-4 py-16">
-          <h1 className="text-3xl md:text-5xl font-bold mb-8 text-yellow-500 text-center">Generate unlimited images </h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-8 text-yellow-500 text-center">Unlimited AI Tools </h1>
           <div className="flex flex-col md:flex-row gap-10">
             {/* Left: Photo Editing Card */}
             <div className="flex-1 bg-[#181A20] rounded-3xl p-8 flex flex-col items-start shadow-xl relative min-h-[420px]">
@@ -94,7 +94,12 @@ export default function Home() {
           </div>
         </section>
 
-        <TestimonialCarousel />
+        <section>
+          <h1>Connect globally within the intelligence network </h1>
+          <p></p>
+        </section>
+
+        {/* <TestimonialCarousel /> */}
 
         {/* Final Hero/CTA Section */}
         <section className="relative min-h-[480px] flex flex-col items-center justify-center text-center bg-[#0a1633] overflow-hidden">
@@ -120,6 +125,8 @@ export default function Home() {
             <button className="bg-white text-[#012a63] font-bold px-8 py-3 rounded-xl shadow-lg hover:bg-[#FFD600] hover:text-[#012a63] transition-all text-lg">GET STARTED</button>
           </div>
         </section>
+
+
       </main>
       <RevealLinks />
     </div>
