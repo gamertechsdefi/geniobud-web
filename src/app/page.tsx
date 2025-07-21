@@ -115,10 +115,10 @@ export default function Home() {
             <rect width="1200" height="600" fill="url(#glow)" />
           </svg>
           <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-2xl mx-auto px-4 py-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl text-yellow-500 md:text-6xl font-bold text-white mb-6 leading-tight">
               Be part of the future of <br />
               <span className="relative inline-block">
-                <span className="px-2 py-1 ] rounded-md">GenioBud</span>
+                <span className="px-2 py-1 ] rounded-md text-yellow-500">GenioBud</span>
               </span>
             </h1>
             <p className="text-lg md:text-xl text-blue-100 mb-8">Unleash the power of AI within GenioBud. Upgrade your productivity with GenioBud, the open AI chat app.</p>
