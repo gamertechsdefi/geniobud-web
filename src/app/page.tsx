@@ -64,32 +64,32 @@ export default function Home() {
         {/* features section - new modern UI */}
 
         {/* AI Media Section (step 1 skeleton) */}
-        <section className="bg-blue-900  w-full px-4 md:px-8 py-16">
+        <section className="bg-[#00409a]  w-full px-4 md:px-8 py-32">
           <h1 className="text-3xl md:text-5xl font-bold mb-8 text-yellow-500 text-center">Unlimited AI Tools </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="p-8 border-2 bg-white/20 border-blue-300 rounded-xl">
               <p className="flex flex-col gap-2">
                 <span className="text-2xl font-bold">Image Generation</span>
                 <span>Generate unlimited images for your contents, story telling, content creation limitlessly with the help of your AI Buddy.</span>
-                </p>
+              </p>
             </div>
             <div className="p-8 border-2 bg-white/20 border-blue-300 rounded-xl">
               <p className="flex flex-col gap-2">
                 <span className="text-2xl font-bold">PDF Upload</span>
                 <span>Upload your PDF files and get instant access to unlimited AI-powered tools to enhance your productivity.</span>
-                </p>
+              </p>
             </div>
             <div className="p-8 border-2 bg-white/20 border-blue-300 rounded-xl">
               <p className="flex flex-col gap-2">
                 <span className="text-2xl font-bold">Real-time Blockchain Analytics</span>
                 <span>Get instant access to real-time blockchain analytics to enhance your productivity.</span>
-                </p>
+              </p>
             </div>
             <div className="p-8 border-2 bg-white/20 border-blue-300 rounded-xl">
               <p className="flex flex-col gap-2">
                 <span className="text-2xl font-bold">Smart Search</span>
                 <span>Find information across your docs instantly.</span>
-                </p>
+              </p>
             </div>
           </div>
         </section>
@@ -97,6 +97,18 @@ export default function Home() {
         <section className="flex flex-col items-center py-16 px-8 md:px-16">
           <h1 className="text-4xl md:text-6xl font-bold text-center">Connect globally within the intelligence network </h1>
           <Image src="/images/networking.webp" alt="ai-media" width={500} height={500} />
+        </section>
+
+        
+        <section className="bg-[#00409a] flex flex-col px-8 md:px-16 py-16 md:flex-row gap-8 md:justify-between md:items-center">
+          <div>
+            <h1 className="text-5xl md:text-6xl font-bold text-yellow-500 pb-4">Earn & Redeem Rewards </h1>
+            <p className="pb-4">Accumulate points by using GenioBud and redeem them for cash or crypto rewards.</p>
+            <a href="https://t.me/GenioBud_bot"><button className="bg-white text-[#012a63] font-bold px-8 py-3 rounded-xl shadow-lg hover:bg-[#FFD600] hover:text-[#012a63] transition-all text-lg">START EARNING</button></a>
+          </div>
+          <div>
+            <Image src="/images/reward.png" alt="ai-media" width={500} height={500} />
+          </div>
         </section>
 
         {/* <TestimonialCarousel /> */}
@@ -122,10 +134,9 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-lg md:text-xl text-blue-100 mb-8">Unleash the power of AI within GenioBud. Upgrade your productivity with GenioBud, the open AI chat app.</p>
-            <button className="bg-white text-[#012a63] font-bold px-8 py-3 rounded-xl shadow-lg hover:bg-[#FFD600] hover:text-[#012a63] transition-all text-lg">GET STARTED</button>
+            <a href="https://t.me/GenioBud_bot"><button className="bg-white text-[#012a63] font-bold px-8 py-3 rounded-xl shadow-lg hover:bg-[#FFD600] hover:text-[#012a63] transition-all text-lg">GET STARTED</button></a>
           </div>
         </section>
-
 
       </main>
       <RevealLinks />

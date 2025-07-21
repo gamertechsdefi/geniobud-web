@@ -63,7 +63,7 @@ export default function Header() {
           {/* Right Actions: hidden on mobile */}
           <div className="hidden sm:flex items-center space-x-4">
             <motion.a 
-              href="#" 
+              href="https://t.me/GenioBud_bot" 
               className="text-white/90 hover:text-white transition-colors duration-200"
               whileHover={{ scale: 1.05 }}
             >
@@ -85,9 +85,9 @@ export default function Header() {
               <a href="#" className="w-full py-2" onClick={() => setMenuOpen(false)}>History</a>
               <a href="#" className="w-full py-2" onClick={() => setMenuOpen(false)}>Contact</a> */}
               <a href="#" className="w-full text-xl py-2" onClick={() => setMenuOpen(false)}>Sign in</a>
-              <button className="bg-blue-600 text-xl font-semibold hover:bg-blue-700 text-white px-6 py-2 rounded-lg w-full" onClick={() => setMenuOpen(false)}>
+              <a href="https://t.me/GenioBud_bot" ><button className="bg-blue-600 text-xl font-semibold hover:bg-blue-700 text-white px-6 py-2 rounded-lg w-full" onClick={() => setMenuOpen(false)}>
                 Try free
-              </button>
+              </button></a>
             </div>
           )}
         </div>
