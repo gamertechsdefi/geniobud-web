@@ -19,7 +19,7 @@ export default function Home() {
             Explore the Possibilities of Limitless AI through GenioBud
           </h1>
           <p className="md:px-16">Experience the power of AI across different domains with GenioBUd. Upgrade your creativity and productivity with the limitless AI Buddy</p>
-            
+
           <div className="flex flex-row gap-8">
             <a href="https://t.me/GenioBud_bot">
               <button className="font-bold text-xl cursor-pointer bg-blue-500 px-8 py-2 rounded-lg">START FREE</button>
@@ -30,7 +30,7 @@ export default function Home() {
         {/* feature carousel section */}
         <FeatureCarousel />
 
-                
+
         <section className="px-4 sm:px-8 py-16">
           <h1 className="text-4xl font-bold text-yellow-500 text-center mb-10">Chat Smarter, Not Harder with GenioBud</h1>
           <div className="flex flex-col md:flex-row justify-center gap-8 max-w-6xl mx-auto">
@@ -64,39 +64,39 @@ export default function Home() {
         {/* features section - new modern UI */}
 
         {/* AI Media Section (step 1 skeleton) */}
-        <section className="bg-blue-900  w-full max-w-7xl mx-auto px-4 py-16">
+        <section className="bg-blue-900  w-full px-4 md:px-8 py-16">
           <h1 className="text-3xl md:text-5xl font-bold mb-8 text-yellow-500 text-center">Unlimited AI Tools </h1>
-          <div className="flex flex-col md:flex-row gap-10">
-            {/* Left: Photo Editing Card */}
-            <div className="flex-1 bg-[#181A20] rounded-3xl p-8 flex flex-col items-start shadow-xl relative min-h-[420px]">
-              {/* Chat bubble */}
-              <div className="absolute left-10 top-8 bg-black text-white px-6 py-4 rounded-xl text-sm font-mono shadow-lg z-10">
-                Hey GenioBud, generate me<br />a samurai
-              </div>
-              {/* Placeholder for image */}
-              <div className="w-full h-64 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center mt-16 mb-6 relative overflow-hidden">
-                <Image src="/images/samurai-gen.webp" alt="samurai" width={500} height={500} />
-              </div>
-              <div>
-                <h3 className="text-white text-2xl font-bold mb-2">Image generation</h3>
-                <p className="text-gray-400 text-sm">Automatically generate your photos using GenioBud&apos;s Imagine feature</p>
-                <button className="text-xs font-bold tracking-wider text-white uppercase opacity-80 group-hover:opacity-100 transition">Coming soon</button>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="p-8 border-2 bg-white/20 border-blue-300 rounded-xl">
+              <p className="flex flex-col gap-2">
+                <span className="text-2xl font-bold">Image Generation</span>
+                <span>Generate unlimited images for your contents, story telling, content creation limitlessly with the help of your AI Buddy.</span>
+                </p>
             </div>
-            {/* Right: Video Generation Card */}
-            <div className="flex-1 bg-[#181A20] rounded-3xl p-8 shadow-xl flex flex-col min-h-[420px]">
-              <h3 className="text-white text-3xl font-bold mb-2">PDF & Document Scans</h3>
-              <p className="text-gray-400 mb-6 text-sm">Upload your PDFs and documents to GenioBud and get instant insights and analysis.</p>
-              <div className="relative bg-[#101014] rounded-2xl flex flex-col items-start mt-auto min-h-[180px] shadow-lg">
-                <Image src="/images/pdf-gen.webp" alt="pdf" width={500} height={500} className="relative z-10 h-full w-full" />
-              </div>
+            <div className="p-8 border-2 bg-white/20 border-blue-300 rounded-xl">
+              <p className="flex flex-col gap-2">
+                <span className="text-2xl font-bold">PDF Upload</span>
+                <span>Upload your PDF files and get instant access to unlimited AI-powered tools to enhance your productivity.</span>
+                </p>
+            </div>
+            <div className="p-8 border-2 bg-white/20 border-blue-300 rounded-xl">
+              <p className="flex flex-col gap-2">
+                <span className="text-2xl font-bold">Real-time Blockchain Analytics</span>
+                <span>Get instant access to real-time blockchain analytics to enhance your productivity.</span>
+                </p>
+            </div>
+            <div className="p-8 border-2 bg-white/20 border-blue-300 rounded-xl">
+              <p className="flex flex-col gap-2">
+                <span className="text-2xl font-bold">Smart Search</span>
+                <span>Find information across your docs instantly.</span>
+                </p>
             </div>
           </div>
         </section>
 
-        <section>
-          <h1>Connect globally within the intelligence network </h1>
-          <p></p>
+        <section className="flex flex-col items-center py-16 px-8 md:px-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-center">Connect globally within the intelligence network </h1>
+          <Image src="/images/networking.webp" alt="ai-media" width={500} height={500} />
         </section>
 
         {/* <TestimonialCarousel /> */}

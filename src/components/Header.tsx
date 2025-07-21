@@ -27,29 +27,29 @@ export default function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
-            <nav className="hidden sm:flex items-center space-x-8">
-              <motion.a 
-                href="#" 
-                className="text-white/90 hover:text-white transition-colors duration-200"
-                whileHover={{ scale: 1.05 }}
-              >
-                Products
-              </motion.a>
-              <motion.a 
-                href="#" 
-                className="text-white/90 hover:text-white transition-colors duration-200"
-                whileHover={{ scale: 1.05 }}
-              >
-                History
-              </motion.a>
-              <motion.a 
-                href="https://t.me/geniobud" 
-                className="text-white/90 hover:text-white transition-colors duration-200"
-                whileHover={{ scale: 1.05 }}
-              >
-                Contact
-              </motion.a>
-            </nav>
+              {/* <nav className="hidden sm:flex items-center space-x-8">
+                <motion.a 
+                  href="#" 
+                  className="text-white/90 hover:text-white transition-colors duration-200"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  Products
+                </motion.a>
+                <motion.a 
+                  href="#" 
+                  className="text-white/90 hover:text-white transition-colors duration-200"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  History
+                </motion.a>
+                <motion.a 
+                  href="https://t.me/geniobud" 
+                  className="text-white/90 hover:text-white transition-colors duration-200"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  Contact
+                </motion.a>
+              </nav> */}
           </div>
 
           {/* Center Logo */}
@@ -81,11 +81,11 @@ export default function Header() {
           {/* Mobile menu overlay */}
           {menuOpen && (
             <div className="sm:hidden absolute top-16 left-0 w-full bg-black/70 rounded-xl text-white flex flex-col items-start px-6 py-4 z-50 animate-fade-in">
-              <a href="#" className="w-full py-2" onClick={() => setMenuOpen(false)}>Products</a>
+              {/* <a href="#" className="w-full py-2" onClick={() => setMenuOpen(false)}>Products</a>
               <a href="#" className="w-full py-2" onClick={() => setMenuOpen(false)}>History</a>
-              <a href="#" className="w-full py-2" onClick={() => setMenuOpen(false)}>Contact</a>
-              <a href="#" className="w-full py-2" onClick={() => setMenuOpen(false)}>Sign in</a>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg w-full" onClick={() => setMenuOpen(false)}>
+              <a href="#" className="w-full py-2" onClick={() => setMenuOpen(false)}>Contact</a> */}
+              <a href="#" className="w-full text-xl py-2" onClick={() => setMenuOpen(false)}>Sign in</a>
+              <button className="bg-blue-600 text-xl font-semibold hover:bg-blue-700 text-white px-6 py-2 rounded-lg w-full" onClick={() => setMenuOpen(false)}>
                 Try free
               </button>
             </div>
